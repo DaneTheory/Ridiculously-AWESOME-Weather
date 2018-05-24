@@ -5,15 +5,16 @@ const WebpackDevServer = require('webpack-dev-server');
 // File
 const config = require('./webpack.config');
 
-const host = 'localhost';
+const host = '127.0.0.1';
 const port = 9777;
 
 new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
-  hot: true,
+  port: 9777,
+  hot: false,
   historyApiFallback: true,
   stats: {
-    colors: true,
+    colors: false,
   },
 }).listen(port, host, function(err, result) {
   if (err) console.log(err);
