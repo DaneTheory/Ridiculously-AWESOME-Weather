@@ -6,7 +6,7 @@
   "scripts": {
     "start": "NODE_ENV=development node server.js",
     "build": "rm -rf ./dist; NODE_ENV=production webpack --config ./webpack.production.config.js",
-    "prod": "pm2 start server.js --name ridiculously-awesome-weather-app"
+    "prod": "NODE_ENV=production pm2 start server.js --name ridiculously-awesome-weather-app"
   },
   "author": "Jason Leibowitz",
   "license": "MIT",
