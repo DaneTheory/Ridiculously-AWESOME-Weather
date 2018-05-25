@@ -37,7 +37,7 @@ const config = {
   devtool: 'cheap-module-eval-source-map',
   entry: {
     app: [
-      'webpack-dev-server/client?http://0.0.0.0:9777', // Webpack Dev Server host and port
+      'webpack-dev-server/client?http://0.0.0.0:3000', // Webpack Dev Server host and port
       'webpack/hot/only-dev-server', // 'only' prevents reload on syntax errors
       join(src, 'index.jsx'),
     ],

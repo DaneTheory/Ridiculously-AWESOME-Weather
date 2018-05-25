@@ -5,18 +5,17 @@ const WebpackDevServer = require('webpack-dev-server');
 // File
 const config = require('./webpack.config');
 
-const host = '127.0.0.1';
-const port = 9777;
+const host = 'localhost';
+const port = 3000;
 
 new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
-  port: 9777,
-  hot: false,
+  hot: true,
   historyApiFallback: true,
   stats: {
-    colors: false,
+    colors: true,
   },
 }).listen(port, host, function(err, result) {
   if (err) console.log(err);
-  console.log(`Ridiculously Awesome Weather App is running on port: :${ port }`);
+  console.log(`Listening at http://${ host }:${ port }`);
 });
